@@ -3,17 +3,13 @@ import os
 
 app = Flask(__name__)
 
-# routing is the process mapping an URL to a function
 @app.route('/')
-def hello():
-    name = "Paul"
-    return render_template('index.template.html', first_name = name)
-
+def index():
+    return render_template('index.template.html')
 
 @app.route('/about-us')
 def about_us():
-    return render_template('about-us.template.html')
-    
+    return render_template('about-us.html')
 
 # "magic code" -- boilerplate
 if __name__ == '__main__':
